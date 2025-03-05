@@ -9,7 +9,6 @@
 		"selector": ".fioot22"
 	}
 },
-
 {
 	"trigger": {
 		"url-filter": "^https?://([^/:]*\\.)?karachan\\.org[/:]",
@@ -17,9 +16,10 @@
 	},
 	"action": {
 		"type": "css-display-none",
-		"selector": "[href*=\"../4/\"], .group-options > div"
+		"selector": "[id=jesli-zablokujesz-tego-diva-ukraina-odniesie-zwyciestwo], [id=smok], [href*=\"../4/\"], .group-options > div"
 	}
 },
+	
 {
 	"trigger": {
 		"url-filter": "^https?://([^/:]*\\.)?chanwiki\\.pl[/:]",
