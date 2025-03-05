@@ -19,7 +19,16 @@
 		"selector": "[id=jesli-zablokujesz-tego-diva-ukraina-odniesie-zwyciestwo], [id=smok], [href*=\"../4/\"], .group-options > div"
 	}
 },
-	
+{
+	"trigger": {
+		"url-filter": "^https?://([^/:]*\\.)?kulturamieszkania\\.wordpress\\.com[/:]",
+		"url-filter-is-case-sensitive": true
+	},
+	"action": {
+		"type": "css-display-none",
+		"selector": "[id=marketingbar], [id=masthead]"
+	}
+},
 {
 	"trigger": {
 		"url-filter": "^https?://([^/:]*\\.)?chanwiki\\.pl[/:]",
@@ -30,7 +39,46 @@
 		"selector": "+js(aopw, HTMLImageElement.prototype.src), .fioot18"
 	}
 },
-
+{
+	"trigger": {
+		"url-filter": "^https://gowno\\.club/assets/css/rave\\.css",
+		"resource-type": [
+			"image",
+			"style-sheet",
+			"script",
+			"font",
+			"media",
+			"raw",
+			"document"
+		],
+		"unless-top-url": [
+			"^https://gowno\\.club/assets/css/rave\\.css"
+		]
+	},
+	"action": {
+		"type": "block"
+	}
+},
+{
+	"trigger": {
+		"url-filter": "^[^:]+:(//)?.*https://gowno\\.club/assets/css/rave\\.css",
+		"resource-type": [
+			"image",
+			"style-sheet",
+			"script",
+			"font",
+			"media",
+			"raw",
+			"document"
+		],
+		"unless-top-url": [
+			"^[^:]+:(//)?.*https://gowno\\.club/assets/css/rave\\.css"
+		]
+	},
+	"action": {
+		"type": "block"
+	}
+},
 {
 	"trigger": {
 		"url-filter": "^[^:]+:(//)?([^/]+\\.)?karachan\\.org/js/htmlshiv\\.js",
