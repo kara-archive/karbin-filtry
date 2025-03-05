@@ -1,0 +1,114 @@
+[
+{
+	"trigger": {
+		"url-filter": "^https?://([^/:]*\\.)?chanwiki\\.com[/:]",
+		"url-filter-is-case-sensitive": true
+	},
+	"action": {
+		"type": "css-display-none",
+		"selector": ".fioot22"
+	}
+},
+
+{
+	"trigger": {
+		"url-filter": "^https?://([^/:]*\\.)?karachan\\.org[/:]",
+		"url-filter-is-case-sensitive": true
+	},
+	"action": {
+		"type": "css-display-none",
+		"selector": "[href*=\"../4/\"], .group-options > div"
+	}
+},
+{
+	"trigger": {
+		"url-filter": "^https?://([^/:]*\\.)?chanwiki\\.pl[/:]",
+		"url-filter-is-case-sensitive": true
+	},
+	"action": {
+		"type": "css-display-none",
+		"selector": "+js(aopw, HTMLImageElement.prototype.src), .fioot18"
+	}
+},
+
+{
+	"trigger": {
+		"url-filter": "^[^:]+:(//)?([^/]+\\.)?karachan\\.org/js/htmlshiv\\.js",
+		"resource-type": [
+			"image",
+			"style-sheet",
+			"script",
+			"font",
+			"media",
+			"raw",
+			"document"
+		],
+		"unless-top-url": [
+			"^[^:]+:(//)?([^/]+\\.)?karachan\\.org/js/htmlshiv\\.js"
+		]
+	},
+	"action": {
+		"type": "block"
+	}
+},
+{
+	"trigger": {
+		"url-filter": "^[^:]+:(//)?([^/]+\\.)?wilchan\\.org/js/smietnik\\.js",
+		"resource-type": [
+			"image",
+			"style-sheet",
+			"script",
+			"font",
+			"media",
+			"raw",
+			"document"
+		],
+		"unless-top-url": [
+			"^[^:]+:(//)?([^/]+\\.)?wilchan\\.org/js/smietnik\\.js"
+		]
+	},
+	"action": {
+		"type": "block"
+	}
+},
+{
+	"trigger": {
+		"url-filter": "^[^:]+:(//)?([^/]+\\.)?wilchan\\.org/js/wilno2\\.js",
+		"resource-type": [
+			"image",
+			"style-sheet",
+			"script",
+			"font",
+			"media",
+			"raw",
+			"document"
+		],
+		"unless-top-url": [
+			"^[^:]+:(//)?([^/]+\\.)?wilchan\\.org/js/wilno2\\.js"
+		]
+	},
+	"action": {
+		"type": "block"
+	}
+},
+{
+	"trigger": {
+		"url-filter": "^[^:]+:(//)?([^/]+\\.)?wilchan\\.org/js/openings.*\\.js",
+		"resource-type": [
+			"image",
+			"style-sheet",
+			"script",
+			"font",
+			"media",
+			"raw",
+			"document"
+		],
+		"unless-top-url": [
+			"^[^:]+:(//)?([^/]+\\.)?wilchan\\.org/js/openings.*\\.js"
+		]
+	},
+	"action": {
+		"type": "block"
+	}
+}
+]
